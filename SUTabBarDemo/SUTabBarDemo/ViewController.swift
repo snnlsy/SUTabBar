@@ -1,34 +1,11 @@
-<p align="center">
-    <a href="https://swift.org/package-manager/">
-        <img src="https://img.shields.io/badge/SPM-compatible-orange" />
-    </a>
-    <img src="https://img.shields.io/badge/Swift-5-orange" />
-</p>
-<br> 
-<p align="center">
-  <img src="SUTabBarDemo/Demo.gif" alt="animated" />
-</p>
-<br> 
+//
+//  ViewController.swift
+//  SUTabBarDemo
+//
+//  Created by Sinan Ulusoy on 6.12.2023.
+//
 
-
-## Description
-This library adds animation to tabbar items.
-
-
-## Installation
-
-### [Swift Package Manager](https://swift.org/package-manager/)
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/snnlsy/SUTabBar.git")
-]
-```
-
-
-## Usage
-
-```swift
+import UIKit
 import SUTabBar
 
 class ViewController: SUTabBarController {
@@ -58,10 +35,18 @@ class ViewController: SUTabBarController {
         tabBar.titleFont = .systemFont(ofSize: 15)
     }
 }
-```
-
-<br> 
 
 
-# License
-The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+// MARK: - Dummy VC
+
+class TestVC: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = UIColor(
+            red: .random(in: 0...1),
+            green: 0.5,
+            blue: 0.5,
+            alpha: 0.5
+        )
+    }
+}
